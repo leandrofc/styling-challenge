@@ -1,0 +1,58 @@
+@use '../../styles/colors' as colors;
+
+.button {
+    padding: 0 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 70px;
+    font-size: 19px;
+    transition: background-color 0.3s ease;
+    color: colors.$light-color;
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+    background-color: colors.$primary-color;
+
+
+    &:hover {
+        background-color: colors.$hover-color;
+        box-shadow: inset 0 0 0 2px colors.$light-color;
+    }
+
+    &--default {
+        white-space: nowrap;
+        overflow: hidden;
+
+        .button__label {
+            display: block;
+            max-width: 100%;
+            line-height: 24px;
+            max-height: calc(24px * 2);
+            overflow: hidden;
+        }
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        .button__label {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            overflow: hidden;
+            white-space: normal;
+            text-overflow: ellipsis;
+            line-height: 24px;
+            text-align: left;
+        }
+    }
+
+    &--disabled {
+        background-color: colors.$disabled-color;
+        pointer-events: none;
+    }
+}
+  
