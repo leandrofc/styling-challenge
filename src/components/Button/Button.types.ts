@@ -3,4 +3,6 @@ export type ButtonProps = {
     onClick?: () => void;
     disabled?: boolean;
     variant?: 'default' | 'icon';
+    isHovered?: boolean;
+    hasborder?: boolean;
 };

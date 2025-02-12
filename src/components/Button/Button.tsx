@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 import { ButtonProps } from './Button.types';
 
-const Button = ({ label, onClick, disabled, variant = 'default' }: ButtonProps) => {
+const Button = ({ label, onClick, disabled, variant = 'default', isHovered, hasborder }: ButtonProps) => {
     const isIconVariant = variant === "icon";
 
     return (
@@ -10,6 +10,8 @@ const Button = ({ label, onClick, disabled, variant = 'default' }: ButtonProps) 
                 ${styles.button}
                 ${styles[`button--${variant}`]}
                 ${disabled && styles["button--disabled"]}
+                ${isHovered && styles["button--hovered"]}
+                ${isHovered && hasborder && styles["button--border"]}
             `}
             onClick={onClick}
             disabled={disabled}
