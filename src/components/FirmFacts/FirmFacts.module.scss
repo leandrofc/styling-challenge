@@ -1,4 +1,5 @@
 @use '../../styles/colors' as colors;
+@use "../../styles/functions" as functions;
 
 .firm-facts {
     width: 100%;
@@ -7,18 +8,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 85px 85px 85px;
+    padding: functions.responsive-clamp(50px) functions.responsive-clamp(85px) functions.responsive-clamp(85px) functions.responsive-clamp(85px);
 
     .close-container {
         width: 100%;
         max-width: 1680px;
         display: flex;
         justify-content: end;
-        margin-bottom: 33px;
+        margin-bottom: functions.responsive-clamp(33px);
+    }
+
+    .close-image {
+        width: functions.responsive-clamp(44px);
+        height: functions.responsive-clamp(44px);
     }
 
     .title {
-        font-size: 60px;
+        font-size: functions.responsive-clamp(60px);
         color: colors.$light-color;
         width: 100%;
         max-width: 1680px;
@@ -27,10 +33,10 @@
     .line {
         width: 100%;
         max-width: 1680px;
-        height: 1px;
+        height: functions.responsive-clamp(1px);
         background-color: colors.$light-color;
-        margin-top: 22px;
-        margin-bottom: 51px;
+        margin-top: functions.responsive-clamp(22px);
+        margin-bottom: functions.responsive-clamp(51px);
         opacity: 0.2;
     }
 
@@ -38,7 +44,7 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-template-rows: repeat(2, auto);
-        gap: 18px;
+        gap: functions.responsive-clamp(18px);
         max-width: 1680px;
         background-color: colors.$primary-color;
     }

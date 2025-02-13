@@ -1,96 +1,42 @@
 import Button from '../Button';
 import FirmFactsCard from '../FirmFactsCard';
 import styles from './FirmFacts.module.scss';
+import { FirmFactsComponentProps } from './FirmFacts.types';
 
-const FirmFacts = () => {
+const FirmFacts = ({ data }: FirmFactsComponentProps) => {
     return (
         <div className={`${styles['firm-facts']}`}>
             <div className={`${styles['close-container']}`}>
                 <img
                     src="./icons/CloseIcon.svg"
                     alt="Close icon"
-                    width="44"
-                    height="44"
+                    className={`${styles['close-image']}`}
                 />
             </div>
 
-            <p className={styles.title}>Firm Facts</p>
+            <h1 className={styles.title}>Firm Facts</h1>
 
             <div className={styles.line} > </div>
 
             <div className={`${styles['cards-layout']}`}>
-                <div className={`${styles.card} ${styles['card-1']}`}>
-                    <FirmFactsCard>
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                        />
-                    </FirmFactsCard>
-                </div>
+                {
+                    data.map(({ buttonProps, cardProps, isTwoRows, index}) => {
 
-                <div className={styles.card}>
-                    <FirmFactsCard>
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                        />
-                    </FirmFactsCard>
-                </div>
-
-                <div className={styles.card}>
-                    <FirmFactsCard>
-                        <Button
-                            label="This is a one line button"
-                            onClick={() => {}}
-                        />
-                    </FirmFactsCard>
-                </div>
-
-                <div className={styles.card}>
-                    <FirmFactsCard>
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                        />
-                    </FirmFactsCard>
-                </div>
-
-                <div className={styles.card}>
-                    <FirmFactsCard childrenPosition='top'>
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                        />
-                    </FirmFactsCard>
-                </div>
-
-                <div className={styles.card}>
-                    <FirmFactsCard disabled childrenPosition='top'>
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                            disabled
-                        />
-                    </FirmFactsCard>
-                </div>
-
-                <div className={styles.card}>
-                    <FirmFactsCard
-                        variant='border'
-                        childrenPosition='top'
-                    >
-                        <Button
-                            label="This is a two line button that terminates with anything else"
-                            onClick={() => {}}
-                            variant="icon"
-                        />
-                    </FirmFactsCard>
-                </div>
+                        return (
+                            <div className={`
+                                    ${styles.card}
+                                    ${isTwoRows && styles['card-1']}
+                                `}
+                                key={index}
+                            >
+                                <FirmFactsCard {...cardProps}>
+                                    <Button {...buttonProps} />
+                                </FirmFactsCard>
+                            </div>
+                        )
+                        
+                    })
+                }
             </div>
         </div>
   );
