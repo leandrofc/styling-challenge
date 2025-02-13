@@ -1,7 +1,8 @@
 @use '../../styles/colors' as colors;
+@use "../../styles/functions" as functions;
 
 .firm-facts-card {
-    padding: 50px 27px;
+    padding: functions.responsive-clamp(50px) functions.responsive-clamp(27px);
     width: 100%;
     height: 100%;
     border-color: colors.$light-color;
@@ -16,7 +17,7 @@
     }
 
     &--border--isHovered {
-        box-shadow: inset 0 0 0 15px colors.$hover-color;
+        box-shadow: inset 0 0 0 functions.responsive-clamp(15px) colors.$hover-color;
         transition: box-shadow 0.3s ease;
     }
 
