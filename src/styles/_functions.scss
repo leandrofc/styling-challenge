@@ -9,3 +9,7 @@
 
     @return clamp(#{$min-size}, calc(#{$slope * 100}vw + #{$intercept}), #{$max-size});
 }
+
+@function calc-aspect-ratio($width, $height) {
+    @return calc($width / $height);
+}
