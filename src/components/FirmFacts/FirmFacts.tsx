@@ -11,7 +11,7 @@ const FirmFacts = ({ data }: FirmFactsComponentProps) => {
                     src="./icons/CloseIcon.svg"
                     alt="Close icon"
                     className={`${styles['close-image']}`}
-                    onClick={() => alert('close Icon clicked!') }
+                    onClick={() => alert('Close Icon clicked!') }
                 />
             </div>
 
