@@ -1,15 +1,16 @@
 @use '../../styles/colors' as colors;
+@use "../../styles/functions" as functions;
 
 .button {
-    padding: 0 23px;
+    padding: 0 functions.responsive-clamp(23px);
     border: none;
     cursor: pointer;
     border-radius: 70px;
-    font-size: 19px;
+    font-size: functions.responsive-clamp(19px);
     transition: background-color 0.3s ease;
     color: colors.$light-color;
     width: 100%;
-    height: 70px;
+    height: functions.responsive-clamp(70px);
     box-sizing: border-box;
     background-color: colors.$primary-color;
 
@@ -18,7 +19,7 @@
     }
 
     &--border {
-        box-shadow: inset 0 0 0 2px colors.$light-color;
+        box-shadow: inset 0 0 0 functions.responsive-clamp(2px) colors.$light-color;
     }
 
     &--default {
@@ -28,8 +29,8 @@
         .button__label {
             display: block;
             max-width: 100%;
-            line-height: 24px;
-            max-height: calc(24px * 2);
+            line-height: functions.responsive-clamp(24px);
+            max-height: calc(functions.responsive-clamp(24px) * 2);
             overflow: hidden;
         }
     }
@@ -37,7 +38,7 @@
     &--icon {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: functions.responsive-clamp(16px);
 
         .button__label {
             display: -webkit-box;
@@ -47,8 +48,13 @@
             overflow: hidden;
             white-space: normal;
             text-overflow: ellipsis;
-            line-height: 24px;
+            line-height: functions.responsive-clamp(24px);
             text-align: left;
+        }
+
+        .button__icon {
+            width: functions.responsive-clamp(22px);
+            height: functions.responsive-clamp(22px);
         }
     }
 

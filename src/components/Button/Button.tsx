@@ -20,8 +20,7 @@ const Button = ({ label, onClick, disabled, variant = 'default', isHovered, hasb
                 <img
                     src="./icons/SearchIcon.svg"
                     alt="Search icon"
-                    width="22"
-                    height="22"
+                    className={styles["button__icon"]}
                 />
             )}
             <span className={styles["button__label"]} >
