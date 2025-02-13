@@ -1,5 +1,6 @@
 @use '../../styles/colors' as colors;
 @use "../../styles/functions" as functions;
+@use "sass:math";
 
 .firm-facts {
     width: 100%;
@@ -51,12 +52,12 @@
   
     .card {
         width: auto;
-        aspect-ratio: functions.calc-aspect-ratio(364, 322) / 1;
+        aspect-ratio: math.div(functions.calc-aspect-ratio(364, 322), 1);
     }
   
     .card-1 {
         grid-row: span 2;
-        aspect-ratio: functions.calc-aspect-ratio(364, 322) / 2;
+        aspect-ratio: math.div(functions.calc-aspect-ratio(364, 322), 2);
         height: 100%;
         width: 100%;
     }

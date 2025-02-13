@@ -11,5 +11,5 @@
 }
 
 @function calc-aspect-ratio($width, $height) {
-    @return calc($width / $height);
+    @return math.div($width, $height);
 }
