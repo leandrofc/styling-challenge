@@ -1,0 +1,10 @@
+@function responsive-clamp($max-size, $min-width: 768px, $max-width: 1680px) {
+    $min-size: $max-size * ($min-width / $max-width);
+    
+    $slope: ($max-size - $min-size) / ($max-width - $min-width);
+    
+    $intercept: $min-size - ($slope * $min-width);
+    
+    @return clamp(#{$min-size}, calc(#{$slope * 100}vw + #{$intercept}), #{$max-size});
+  }
+  
