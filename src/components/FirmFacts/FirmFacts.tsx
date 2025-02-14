@@ -21,9 +21,7 @@ const FirmFacts = ({ data }: FirmFactsComponentProps) => {
 
             <div className={`${styles['firm-facts__cards-layout']}`}>
                 {
-                    data.map(({ buttonProps, cardProps, isTwoRows, index}) => {
-
-                        return (
+                    data.map(({ buttonProps, cardProps, isTwoRows, index}) => (
                             <div className={`
                                     ${styles['firm-facts__card']}
                                     ${isTwoRows && styles['firm-facts__card-with-two-rows']}
@@ -34,9 +32,8 @@ const FirmFacts = ({ data }: FirmFactsComponentProps) => {
                                     <Button {...buttonProps} />
                                 </FirmFactsCard>
                             </div>
-                        )
-                        
-                    })
+                        )    
+                    )
                 }
             </div>
         </div>
