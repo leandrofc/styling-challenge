@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Styling Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project developed for a technical challenge to test my React skills.
 
-Currently, two official plugins are available:
+I received a document describing all the requirements and specifications of what should be implemented in this challenge.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This was the result following all the specifications received.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<p align="left">
+  <img widht="1008" src="./layout.png">
+</p>
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## Installation:
+
+To run the project locally, follow the steps below:
+
+### 1. Prerequisites:
+
+Before you begin, make sure you have installed:
+
+- <a href="https://nodejs.org/en" target="_blank">Node.js</a> (LTS version recommended)
+
+- <a href="https://www.npmjs.com/" target="_blank">npm</a> or <a href="https://yarnpkg.com/" target="_blank">yarn</a>
+
+### 2. Clone the repository:
+
+```sh
+git clone https://github.com/leandrofc/styling-challenge.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 3. Access the project directory:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```sh
+cd styling-challenge
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 4. Install the dependencies::
+
+```sh
+npm install
+```
+
+or
+
+```sh
+yarn install
+```
+
+### 5. Running the project:
+
+```sh
+npm run dev
+```
+
+
+or
+
+```sh
+yarn dev
 ```
