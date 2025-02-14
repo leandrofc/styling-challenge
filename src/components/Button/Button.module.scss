@@ -32,6 +32,8 @@
             line-height: functions.responsive-clamp(24px);
             max-height: calc(functions.responsive-clamp(24px) * 2);
             overflow: hidden;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
     }
 
@@ -50,6 +52,8 @@
             text-overflow: ellipsis;
             line-height: functions.responsive-clamp(24px);
             text-align: left;
+            font-weight: 600;
+            letter-spacing: -0.5px;
         }
 
         .button__icon {
