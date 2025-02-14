@@ -11,27 +11,27 @@
     padding: functions.responsive-clamp(50px) functions.responsive-clamp(85px) functions.responsive-clamp(85px) functions.responsive-clamp(85px);
     margin-top: 100px;
 
-    .close-container {
+    &--close-container {
         width: 100%;
         display: flex;
         justify-content: end;
         margin-bottom: functions.responsive-clamp(33px);
     }
 
-    .close-image {
+    &--close-image {
         width: functions.responsive-clamp(44px);
         height: functions.responsive-clamp(44px);
         cursor: pointer;
     }
 
-    .title {
+    &--title {
         font-size: functions.responsive-clamp(60px);
         color: colors.$light-color;
         width: 100%;
         max-width: 1680px;
     }
 
-    .line {
+    &--line {
         width: 100%;
         max-width: 1680px;
         height: functions.responsive-clamp(1px);
@@ -41,7 +41,7 @@
         opacity: 0.2;
     }
 
-    .cards-layout{
+    &--cards-layout{
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-template-rows: repeat(2, auto);
@@ -50,12 +50,12 @@
         background-color: colors.$primary-color;
     }
   
-    .card {
+    &--card {
         width: auto;
         aspect-ratio: math.div(functions.calc-aspect-ratio(364, 322), 1);
     }
   
-    .card-1 {
+    &--card-with-two-rows {
         grid-row: span 2;
         aspect-ratio: math.div(functions.calc-aspect-ratio(364, 322), 2);
         height: 100%;

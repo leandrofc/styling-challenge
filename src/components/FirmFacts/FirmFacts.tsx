@@ -6,27 +6,27 @@ import { FirmFactsComponentProps } from './FirmFacts.types';
 const FirmFacts = ({ data }: FirmFactsComponentProps) => {
     return (
         <div className={`${styles['firm-facts']}`}>
-            <div className={`${styles['close-container']}`}>
+            <div className={`${styles['firm-facts--close-container']}`}>
                 <img
                     src="./icons/CloseIcon.svg"
                     alt="Close icon"
-                    className={`${styles['close-image']}`}
+                    className={`${styles['firm-facts--close-image']}`}
                     onClick={() => alert('Close Icon clicked!') }
                 />
             </div>
 
-            <h1 className={styles.title}>Firm Facts</h1>
+            <h1 className={`${styles['firm-facts--title']}`}>Firm Facts</h1>
 
-            <div className={styles.line} > </div>
+            <div className={`${styles['firm-facts--line']}`} > </div>
 
-            <div className={`${styles['cards-layout']}`}>
+            <div className={`${styles['firm-facts--cards-layout']}`}>
                 {
                     data.map(({ buttonProps, cardProps, isTwoRows, index}) => {
 
                         return (
                             <div className={`
-                                    ${styles.card}
-                                    ${isTwoRows && styles['card-1']}
+                                    ${styles['firm-facts--card']}
+                                    ${isTwoRows && styles['firm-facts--card-with-two-rows']}
                                 `}
                                 key={index}
                             >
