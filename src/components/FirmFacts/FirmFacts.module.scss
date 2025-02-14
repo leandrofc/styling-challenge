@@ -3,17 +3,16 @@
 @use "sass:math";
 
 .firm-facts {
-    width: 100%;
-    height: 100%;
+    max-width: 1680px;
     background-color: #2D3E4E;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: functions.responsive-clamp(50px) functions.responsive-clamp(85px) functions.responsive-clamp(85px) functions.responsive-clamp(85px);
+    margin-top: 100px;
 
     .close-container {
         width: 100%;
-        max-width: 1680px;
         display: flex;
         justify-content: end;
         margin-bottom: functions.responsive-clamp(33px);

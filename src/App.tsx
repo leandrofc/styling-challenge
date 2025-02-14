@@ -77,7 +77,11 @@ function App() {
     }
   ]
 
-  return <FirmFacts data={content} />
+  return (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <FirmFacts data={content} />
+    </div>
+  )
 }
 
 export default App
