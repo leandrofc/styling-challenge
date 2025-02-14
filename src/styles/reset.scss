@@ -10,6 +10,8 @@ html, body {
     font-family: 'Open Sans', sans-serif;
     background-color: #fff;
     color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 button {
