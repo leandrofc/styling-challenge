@@ -1,3 +1,4 @@
+import styles from "./styles/App.module.scss";
 import FirmFacts from './components/FirmFacts';
 import { FirmFactsProps } from './components/FirmFacts/FirmFacts.types';
 
@@ -78,7 +79,7 @@ function App() {
   ]
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div className={styles["container"]}>
       <FirmFacts data={content} />
     </div>
   )
