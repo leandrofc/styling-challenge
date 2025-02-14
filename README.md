@@ -6,12 +6,9 @@ I received a document describing all the requirements and specifications of what
 
 This was the result following all the specifications received.
 
-
 <p align="left">
-  <img widht="1008" src="./layout.png">
+  <img widht="1008" src="./public/layout.png">
 </p>
-
-
 
 ## Installation:
 
